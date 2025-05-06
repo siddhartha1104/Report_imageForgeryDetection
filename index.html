@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgery Detection</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .gallery-item {
+        flex: 0 0 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .image-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .gallery-item:hover .image-caption {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <h1>Report: BusterNet_pytorch Model</h1> -->
+      <!-- <a href="index.html"> Click -> Report: BusterNet_pytorch Model</a
+      ><span> || </span>
+      <a href="https://github.com/ntdat017/BusterNet_pytorch" target="_blank"
+        >Github: https://github.com/ntdat017/BusterNet_pytorch</a
+      ><br /><br />
+
+      <a href="NoisePrintReport.html">
+        Click -> Report: NoisePrint Model Report</a
+      ><span> || </span
+      ><a href="https://github.com/grip-unina/noiseprint" target="_blank"
+        >Github: https://github.com/grip-unina/noiseprint</a
+      >
+      <br /><br />
+      <a href="hifi.html"> <p>Click -> Report: HiFi-IFDL Model</p></a><br />
+      <br /> -->
+      <div class="gallery">
+        <!-- Image 1 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/1bench_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/1bench_result.png"
+              alt="Image 1"
+            />
+          </a>
+          <div class="image-caption">1bench_result.png</div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/2car_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/2car_result.png"
+              alt="Image 2"
+            />
+          </a>
+          <div class="image-caption">2car_result.png</div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/3chalk_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/3chalk_result.png"
+              alt="Image 3"
+            />
+          </a>
+          <div class="image-caption">3chalk_result.png</div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/4cows_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/4cows_result.png"
+              alt="Image 4"
+            />
+          </a>
+          <div class="image-caption">4cows_result.png</div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/5crystal_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/5crystal_result.png"
+              alt="Image 5"
+            />
+          </a>
+          <div class="image-caption">5crystal_result.png</div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/6dessert_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/6dessert_result.png"
+              alt="Image 6"
+            />
+          </a>
+          <div class="image-caption">6dessert_result.png</div>
+        </div>
+
+        <!-- Image 7 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/7earth_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/7earth_result.png"
+              alt="Image 7"
+            />
+          </a>
+          <div class="image-caption">7earth_result.png</div>
+        </div>
+
+        <!-- Image 8 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/8egg_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/8egg_result.png"
+              alt="Image 8"
+            />
+          </a>
+          <div class="image-caption">8egg_result.png</div>
+        </div>
+
+        <!-- Image 9 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/9flowers_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/9flowers_result.png"
+              alt="Image 9"
+            />
+          </a>
+          <div class="image-caption">9flowers_result.png</div>
+        </div>
+
+        <!-- Image 10 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/10food_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/10food_result.png"
+              alt="Image 10"
+            />
+          </a>
+          <div class="image-caption">10Food_result.png</div>
+        </div>
+
+        <!-- Image 11 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/11fungus_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/11fungus_result.png"
+              alt="Image 11"
+            />
+          </a>
+          <div class="image-caption">11fungus_result.png</div>
+        </div>
+
+        <!-- Image 12 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/12graffiti_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/12graffiti_result.png"
+              alt="Image 12"
+            />
+          </a>
+          <div class="image-caption">12graffiti_result.png</div>
+        </div>
+
+        <!-- Image 13 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/13horse_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/13horse_result.png"
+              alt="Image 13"
+            />
+          </a>
+          <div class="image-caption">13horse_result.png</div>
+        </div>
+
+        <!-- Image 14 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/14landscape_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/14landscape_result.png"
+              alt="Image 14"
+            />
+          </a>
+          <div class="image-caption">14landscape_result.png</div>
+        </div>
+
+        <!-- Image 15 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/15men_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/15men_result.png"
+              alt="Image 15"
+            />
+          </a>
+          <div class="image-caption">15men_result.png</div>
+        </div>
+
+        <!-- Image 16 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/16northernlights_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/16northernlights_result.png"
+              alt="Image 16"
+            />
+          </a>
+          <div class="image-caption">16northernlights_result.png</div>
+        </div>
+
+        <!-- Image 17 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/17person_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/17person_result.png"
+              alt="Image 17"
+            />
+          </a>
+          <div class="image-caption">17person_result.png</div>
+        </div>
+
+        <!-- Image 18 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/18pipes_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/18pipes_result.png"
+              alt="Image 18"
+            />
+          </a>
+          <div class="image-caption">18pipes_result.png</div>
+        </div>
+
+        <!-- Image 19 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/19reindeer_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/19reindeer_result.png"
+              alt="Image 19"
+            />
+          </a>
+          <div class="image-caption">19reindeer_result.png</div>
+        </div>
+
+        <!-- Image 20 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/20roses_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/20roses_result.png"
+              alt="Image 20"
+            />
+          </a>
+          <div class="image-caption">20roses_result.png</div>
+        </div>
+
+        <!-- Image 21 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/21rotunda_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/21rotunda_result.png"
+              alt="Image 21"
+            />
+          </a>
+          <div class="image-caption">21rotunda_result.png</div>
+        </div>
+
+        <!-- Image 22 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/22selfie_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/22selfie_result.png"
+              alt="Image 22"
+            />
+          </a>
+          <div class="image-caption">22selfie_result.png</div>
+        </div>
+
+        <!-- Image 23 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/23shells_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/23shells_result.png"
+              alt="Image 23"
+            />
+          </a>
+          <div class="image-caption">23shells_result.png</div>
+        </div>
+
+        <!-- Image 24 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/24shutters_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/24shutters_result.png"
+              alt="Image 24"
+            />
+          </a>
+          <div class="image-caption">24shutters_result.png</div>
+        </div>
+
+        <!-- Image 25 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/25statue_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/25statue_result.png"
+              alt="Image 25"
+            />
+          </a>
+          <div class="image-caption">25statue_result.png</div>
+        </div>
+
+        <!-- Image 26 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/26stilllife_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/26stilllife_result.png"
+              alt="Image 26"
+            />
+          </a>
+          <div class="image-caption">26stilllife_result.png</div>
+        </div>
+
+        <!-- Image 27 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/27stone_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/27stone_result.png"
+              alt="Image 27"
+            />
+          </a>
+          <div class="image-caption">27stone_result.png</div>
+        </div>
+
+        <!-- Image 28 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/28streetart_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/28streetart_result.png"
+              alt="Image 28"
+            />
+          </a>
+          <div class="image-caption">28streetart_result.png</div>
+        </div>
+
+        <!-- Image 29 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/29tulip_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/29tulip_result.png"
+              alt="Image 29"
+            />
+          </a>
+          <div class="image-caption">29tulip_result.png</div>
+        </div>
+
+        <!-- Image 30 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/30water_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/30water_result.png"
+              alt="Image 30"
+            />
+          </a>
+          <div class="image-caption">30water_result.png</div>
+        </div>
+
+        <!-- Image 31 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/31windmill_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/31windmill_result.png"
+              alt="Image 31"
+            />
+          </a>
+          <div class="image-caption">31windmill_result.png</div>
+        </div>
+
+        <!-- Image 32 -->
+        <div class="gallery-item">
+          <a
+            href="output_results_BusterNet_pytorch/32windows_result.png"
+            target="_blank"
+          >
+            <img
+              src="output_results_BusterNet_pytorch/32windows_result.png"
+              alt="Image 32"
+            />
+          </a>
+          <div class="image-caption">32windows_result.png</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
